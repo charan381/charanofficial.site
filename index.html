@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Charan | Portfolio</title>
 
+    <!-- SEO -->
+    <meta name="description" content="Charan - Software Developer and Machine Learning Enthusiast. Portfolio showcasing projects, skills, and contact details." />
+    <meta name="keywords" content="Charan, Portfolio, Python Developer, Machine Learning, AI, FastAPI, Backend Developer, Software Engineer" />
+    <meta name="author" content="Charan" />
+
+    <!-- Social Share Preview -->
+    <meta property="og:title" content="Charan | Portfolio" />
+    <meta property="og:description" content="Software Developer • Machine Learning Enthusiast" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://charanofficial.site" />
+    <meta property="og:image" content="https://charanofficial.site/banner.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
     <!-- ICONS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <style>
         * {
@@ -16,28 +31,55 @@
             font-family: "Poppins", sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background: linear-gradient(135deg, #0f0f0f, #1b1b26, #3b415c);
             color: white;
             overflow-x: hidden;
         }
 
+        /* NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.08);
+            padding: 15px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #4c6ef5;
+            transform: scale(1.05);
+        }
+
         .container {
             width: 90%;
             max-width: 950px;
-            margin: 50px auto;
+            margin: 120px auto 50px auto;
         }
 
-        /* GLASS EFFECT */
+        /* Glass Sections */
         .glass {
-            background: rgba(255, 255, 255, 0.12);
+            background: rgba(255,255,255,0.12);
             border-radius: 16px;
             padding: 25px;
             margin-top: 30px;
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-
-            /* Animation */
+            border: 1px solid rgba(255,255,255,0.1);
             opacity: 0;
             transform: translateY(30px);
             animation: fadeIn 1s ease forwards;
@@ -64,8 +106,8 @@
         }
 
         .social-links a {
-            text-decoration: none;
             margin: 0 10px;
+            text-decoration: none;
             font-size: 1.5rem;
             color: #9bbcff;
             transition: 0.3s ease;
@@ -76,12 +118,7 @@
             transform: scale(1.2);
         }
 
-        h2 {
-            font-size: 1.6rem;
-            margin-bottom: 10px;
-        }
-
-        /* SKILLS */
+        /* Skills */
         .skills ul {
             list-style: none;
             display: flex;
@@ -93,7 +130,7 @@
             padding: 10px 16px;
             background: rgba(255,255,255,0.15);
             border-radius: 20px;
-            transition: 0.4s ease;
+            transition: 0.3s ease;
         }
 
         .skills li:hover {
@@ -101,30 +138,30 @@
             transform: scale(1.05);
         }
 
-        /* PROJECT CARDS */
+        /* Projects */
         .project-card {
             background: rgba(255,255,255,0.08);
-            padding: 18px;
             border-radius: 12px;
+            padding: 18px;
             margin-top: 15px;
-            transition: 0.4s ease;
+            transition: 0.3s ease;
         }
 
         .project-card:hover {
-            transform: translateY(-6px);
             background: rgba(255,255,255,0.18);
+            transform: translateY(-6px);
         }
 
-        /* CONTACT BUTTON */
+        /* Buttons */
         .contact-btn {
             display: inline-block;
             margin-top: 15px;
             padding: 12px 22px;
-            font-size: 1rem;
             background: #4c6ef5;
             border-radius: 30px;
             color: white;
             text-decoration: none;
+            font-size: 1rem;
             transition: 0.3s ease;
         }
 
@@ -139,36 +176,37 @@
             opacity: 0.7;
         }
 
-        /* ANIMATIONS */
+        /* Animations */
         @keyframes fadeIn {
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes fadeSlide {
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @media(max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
-            }
+            header h1 { font-size: 2rem; }
         }
     </style>
 </head>
 
 <body>
 
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <div class="container">
 
+        <!-- HEADER -->
         <header>
             <h1>Charan</h1>
-            <p>Software Developer • ML Enthusiast</p>
+            <p>Software Developer • Machine Learning Enthusiast</p>
             <div class="social-links">
                 <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
@@ -176,16 +214,17 @@
             </div>
         </header>
 
-        <section class="glass">
+        <!-- ABOUT -->
+        <section id="about" class="glass">
             <h2>About Me</h2>
             <p>
-                I'm a Computer Science student passionate about backend development, AI,
-                and solving real-world challenges with technology. I love building structured systems,
-                experimenting with models, and shipping impactful projects.
+                I'm a Computer Science student passionate about backend development, machine learning, 
+                and solving real-world challenges. I enjoy creating meaningful applications and exploring AI.
             </p>
         </section>
 
-        <section class="glass skills">
+        <!-- SKILLS -->
+        <section id="skills" class="glass skills">
             <h2>Skills</h2>
             <ul>
                 <li>Python</li>
@@ -199,29 +238,32 @@
             </ul>
         </section>
 
-        <section class="glass">
+        <!-- PROJECTS -->
+        <section id="projects" class="glass">
             <h2>Projects</h2>
 
             <div class="project-card">
                 <strong>🔊 Real-time Speech Translator</strong>
-                <p>Speech → Translation → Output using Python, NLP, and Audio Pipeline.</p>
+                <p>Speech → Translation → Output using Python, NLP, and speech AI.</p>
             </div>
 
             <div class="project-card">
                 <strong>🚗 Tyre Pressure Monitoring (YOLO)</strong>
-                <p>Deep learning model detecting tyre pressure issues through image classification.</p>
+                <p>Computer vision pipeline detecting tyre pressure anomalies using YOLO.</p>
             </div>
 
             <div class="project-card">
                 <strong>📚 SkillTEL Platform</strong>
-                <p>A full learning system with login, payments, dashboards & user roles.</p>
+                <p>Full-stack learning platform with authentication, payments, and dashboards.</p>
             </div>
         </section>
 
-        <section class="glass">
+        <!-- CONTACT -->
+        <section id="contact" class="glass">
             <h2>Contact</h2>
-            <p>📩 Email: <a href="mailto:contact@charanofficial.site" style="color:#9bbcff;">contact@charanofficial.site</a></p>
-            <a href="mailto:contact@charanofficial.site" class="contact-btn">Connect with Me</a>
+            <p>📩 Email: <a style="color:#9bbcff;" href="mailto:contact@charanofficial.site">contact@charanofficial.site</a></p>
+            <a class="contact-btn" href="mailto:contact@charanofficial.site">Connect with Me</a>
+            <a class="contact-btn" href="resume.pdf" download>📄 Download Resume</a>
         </section>
 
     </div>
