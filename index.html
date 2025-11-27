@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charan | Portfolio</title>
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f0f0f, #1b1b26, #3b415c);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 950px;
+            margin: 50px auto;
+        }
+
+        /* GLASS EFFECT */
+        .glass {
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 30px;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+            /* Animation */
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 1s ease forwards;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeSlide 1.2s ease forwards;
+        }
+
+        header h1 {
+            font-size: 3rem;
+        }
+
+        header p {
+            opacity: 0.8;
+        }
+
+        /* SOCIAL ICONS */
+        .social-links {
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            color: #9bbcff;
+            transition: 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #4c6ef5;
+            transform: scale(1.2);
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        /* SKILLS */
+        .skills ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills li {
+            padding: 10px 16px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            transition: 0.4s ease;
+        }
+
+        .skills li:hover {
+            background: rgba(255,255,255,0.25);
+            transform: scale(1.05);
+        }
+
+        /* PROJECT CARDS */
+        .project-card {
+            background: rgba(255,255,255,0.08);
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 15px;
+            transition: 0.4s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            background: rgba(255,255,255,0.18);
+        }
+
+        /* CONTACT BUTTON */
+        .contact-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 22px;
+            font-size: 1rem;
+            background: #4c6ef5;
+            border-radius: 30px;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background: #3b5bdb;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            opacity: 0.7;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeIn {
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeSlide {
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media(max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Charan</h1>
+            <p>Software Developer • ML Enthusiast</p>
+            <div class="social-links">
+                <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:contact@charanofficial.site" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </header>
+
+        <section class="glass">
+            <h2>About Me</h2>
+            <p>
+                I'm a Computer Science student passionate about backend development, AI,
+                and solving real-world challenges with technology. I love building structured systems,
+                experimenting with models, and shipping impactful projects.
+            </p>
+        </section>
+
+        <section class="glass skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python</li>
+                <li>Machine Learning</li>
+                <li>Deep Learning</li>
+                <li>SQL</li>
+                <li>FastAPI</li>
+                <li>Java</li>
+                <li>Flask</li>
+                <li>HTML & CSS</li>
+            </ul>
+        </section>
+
+        <section class="glass">
+            <h2>Projects</h2>
+
+            <div class="project-card">
+                <strong>🔊 Real-time Speech Translator</strong>
+                <p>Speech → Translation → Output using Python, NLP, and Audio Pipeline.</p>
+            </div>
+
+            <div class="project-card">
+                <strong>🚗 Tyre Pressure Monitoring (YOLO)</strong>
+                <p>Deep learning model detecting tyre pressure issues through image classification.</p>
+            </div>
+
+            <div class="project-card">
+                <strong>📚 SkillTEL Platform</strong>
+                <p>A full learning system with login, payments, dashboards & user roles.</p>
+            </div>
+        </section>
+
+        <section class="glass">
+            <h2>Contact</h2>
+            <p>📩 Email: <a href="mailto:contact@charanofficial.site" style="color:#9bbcff;">contact@charanofficial.site</a></p>
+            <a href="mailto:contact@charanofficial.site" class="contact-btn">Connect with Me</a>
+        </section>
+
+    </div>
+
+    <footer>
+        © 2025 Charan — All Rights Reserved
+    </footer>
+
+</body>
+</html>
